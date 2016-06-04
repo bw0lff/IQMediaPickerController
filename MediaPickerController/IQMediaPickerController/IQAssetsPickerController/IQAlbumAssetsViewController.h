@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, IQAssetsPickerControllerAssetType) {
 @interface IQAlbumAssetsViewController : UICollectionViewController
 
 @property (assign, nonatomic) ALAssetsGroup *assetsGroup;
+@property(nonatomic, strong) NSMutableIndexSet *selectedAssets;
 @property(nonatomic, assign) IQAssetsPickerController *assetController;
 @property (assign, nonatomic) IQAssetsPickerControllerAssetType pickerType;
 

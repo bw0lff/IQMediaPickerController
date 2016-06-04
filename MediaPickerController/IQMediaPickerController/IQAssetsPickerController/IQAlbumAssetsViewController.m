@@ -37,8 +37,6 @@
     UIImage *_selectedImageToShare;
 }
 
-@property(nonatomic, strong) NSMutableIndexSet *selectedAssets;
-
 @end
 
 @implementation IQAlbumAssetsViewController
@@ -110,41 +108,45 @@
 
 - (void)doneAction:(UIBarButtonItem *)sender
 {
-    NSMutableArray *selectedVideo = [[NSMutableArray alloc] init];
+    NSMutableArray *selectedAssets = [[NSMutableArray alloc] init];
+    NSMutableArray *selectedVideos = [[NSMutableArray alloc] init];
     NSMutableArray *selectedImages = [[NSMutableArray alloc] init];
+    
+    BOOL isAssetsDefined = [self.assetController.delegate respondsToSelector:@selector(assetsPickerController:didFinishMediaWithAssets:)];
+    BOOL isMediaDefined = !self.assetController.allowsPickingMultipleItems && [self.assetController.delegate respondsToSelector:@selector(assetsPickerController:didFinishMediaWithInfo:)];
     
     [self.assetsGroup enumerateAssetsAtIndexes:self.selectedAssets options:NSEnumerationConcurrent usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
         
-        if (result)
-        {
-            if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto])
-            {
-                CGImageRef imageRef = [[result defaultRepresentation] fullResolutionImage];
-                UIImage *image = [UIImage imageWithCGImage:imageRef scale:result.defaultRepresentation.scale orientation:result.defaultRepresentation.orientation];
-                
-                NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:image,IQMediaImage, nil];
-                
-                [selectedImages addObject:dict];
+        if (result) {
+            if(isAssetsDefined) {
+                [selectedAssets addObject:result];
             }
-            else if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypeVideo])
-            {
-                ALAssetRepresentation *representation = [result defaultRepresentation];
-                NSURL *url = [representation url];
-                
-                NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:url,IQMediaAssetURL, nil];
-                
-                [selectedVideo addObject:dict];
+            
+            if(isMediaDefined) {
+                if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]) {
+                    CGImageRef imageRef = [[result defaultRepresentation] fullResolutionImage];
+                    UIImage *image = [UIImage imageWithCGImage:imageRef scale:result.defaultRepresentation.scale orientation:result.defaultRepresentation.orientation];
+                    [selectedImages addObject:@{IQMediaImage: image}];
+                    
+                } else if ([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypeVideo]) {
+                    ALAssetRepresentation *representation = [result defaultRepresentation];
+                    NSURL *url = [representation url];
+                    [selectedVideos addObject:@{IQMediaAssetURL: url}];
+                }
             }
         }
     }];
     
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    if(isAssetsDefined) {
+        [self.assetController.delegate assetsPickerController:self.assetController didFinishMediaWithAssets:selectedAssets];
+    }
     
-    if ([selectedImages count]) [dict setObject:selectedImages forKey:IQMediaTypeImage];
-    if ([selectedVideo count])  [dict setObject:selectedVideo forKey:IQMediaTypeVideo];
-    
-    if ([self.assetController.delegate respondsToSelector:@selector(assetsPickerController:didFinishMediaWithInfo:)])
-    {
+    if(isMediaDefined) {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        
+        if ([selectedImages count]) [dict setObject:selectedImages forKey:IQMediaTypeImage];
+        if ([selectedVideos count]) [dict setObject:selectedVideos forKey:IQMediaTypeVideo];
+        
         [self.assetController.delegate assetsPickerController:self.assetController didFinishMediaWithInfo:dict];
     }
     
@@ -235,6 +237,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     IQAssetsCell *cell = (IQAssetsCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    if(!self.assetController.allowsPickingMultipleItems) {
+        [self.selectedAssets removeAllIndexes];
+    }
     
     BOOL previouslyContainsIndex = [self.selectedAssets containsIndex:indexPath.row];
     

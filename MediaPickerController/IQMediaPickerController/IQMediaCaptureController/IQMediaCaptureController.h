@@ -51,7 +51,12 @@ typedef NS_ENUM(NSInteger, IQMediaCaptureControllerCameraDevice) {
 
 @protocol IQMediaCaptureControllerDelegate <NSObject>
 
-- (void)mediaCaptureController:(IQMediaCaptureController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
 - (void)mediaCaptureControllerDidCancel:(IQMediaCaptureController *)controller;
+
+@optional
+
+- (void)mediaCaptureController:(IQMediaCaptureController*)controller didFinishMediaWithAssets:(NSArray *)assets;
+- (void)mediaCaptureController:(IQMediaCaptureController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
+
 
 @end

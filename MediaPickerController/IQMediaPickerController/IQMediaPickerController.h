@@ -21,8 +21,10 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/ALAsset.h>
+#import <MediaPlayer/MPMediaItem.h>
+
 #import "IQMediaPickerControllerConstants.h"
 
 typedef NS_ENUM(NSInteger, IQMediaPickerControllerMediaType) {
@@ -46,7 +48,12 @@ typedef NS_ENUM(NSInteger, IQMediaPickerControllerMediaType) {
 
 @protocol IQMediaPickerControllerDelegate <NSObject>
 
-- (void)mediaPickerController:(IQMediaPickerController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
 - (void)mediaPickerControllerDidCancel:(IQMediaPickerController *)controller;
+
+@optional
+
+- (void)mediaPickerController:(IQMediaPickerController*)controller didFinishMediaWithItems:(NSArray<MPMediaItem*>*)items;
+- (void)mediaPickerController:(IQMediaPickerController*)controller didFinishMediaWithAssets:(NSArray<ALAsset*>*)assets;
+- (void)mediaPickerController:(IQMediaPickerController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
 
 @end

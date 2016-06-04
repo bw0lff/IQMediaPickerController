@@ -28,7 +28,9 @@
 
 @interface IQAssetsPickerController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic, assign) id<IQAssetsPickerControllerDelegate> delegate;
+@property (readonly) NSMutableArray *assetGroups;
+
+@property (nonatomic, assign) id<IQAssetsPickerControllerDelegate> delegate;
 @property (nonatomic) BOOL allowsPickingMultipleItems; // default is NO
 @property (nonatomic, assign) IQAssetsPickerControllerAssetType pickerType;
 
@@ -37,7 +39,10 @@
 
 @protocol IQAssetsPickerControllerDelegate <NSObject>
 
-- (void)assetsPickerController:(IQAssetsPickerController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
 - (void)assetsPickerControllerDidCancel:(IQAssetsPickerController *)controller;
+
+@optional
+- (void)assetsPickerController:(IQAssetsPickerController*)controller didFinishMediaWithInfo:(NSDictionary *)info;
+- (void)assetsPickerController:(IQAssetsPickerController*)controller didFinishMediaWithAssets:(NSArray *)assets;
 
 @end

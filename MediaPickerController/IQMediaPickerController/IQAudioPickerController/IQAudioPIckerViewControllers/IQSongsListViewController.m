@@ -22,14 +22,22 @@
 //  THE SOFTWARE.
 
 #import "IQSongsListViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
 #import "IQSongsListTableHeaderView.h"
 #import "IQAudioPickerUtility.h"
 #import "IQSongsCell.h"
 #import "IQAudioPickerController.h"
 #import "IQMediaPickerControllerConstants.h"
 
+@interface IQSongsListViewController()
+{
+    MPMediaQuery *_songsQuery;
+}
+
+@end
+
 @implementation IQSongsListViewController
+
+@synthesize songsQuery = _songsQuery;
 
 - (instancetype)init
 {
@@ -45,6 +53,9 @@
 {
     [super viewDidLoad];
 
+    _songsQuery = [MPMediaQuery songsQuery];
+    [_songsQuery addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@(NO) forProperty:MPMediaItemPropertyIsCloudItem]];
+    
     self.tableView.rowHeight = 50;
     [self.tableView registerClass:[IQSongsCell class] forCellReuseIdentifier:NSStringFromClass([IQSongsCell class])];
     [self.tableView registerClass:[IQSongsListTableHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([IQSongsListTableHeaderView class])];
@@ -118,7 +129,7 @@
     }
     else
     {
-        return [[[MPMediaQuery songsQuery] items] count];
+        return [[_songsQuery items] count];
     }
 }
 
@@ -134,7 +145,7 @@
     }
     else
     {
-        item = [[[MPMediaQuery songsQuery] items] objectAtIndex:indexPath.row];
+        item = [[_songsQuery items] objectAtIndex:indexPath.row];
     }
     
     cell.isSelected = [self.audioPickerController.selectedItems containsObject:item];
@@ -154,7 +165,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MPMediaItem *item = [[[MPMediaQuery songsQuery] items] objectAtIndex:indexPath.row];
+    MPMediaItem *item = [[_songsQuery items] objectAtIndex:indexPath.row];
 
     if (self.collections)
     {
@@ -162,7 +173,7 @@
     }
     else
     {
-        item = [[[MPMediaQuery songsQuery] items] objectAtIndex:indexPath.row];
+        item = [[_songsQuery items] objectAtIndex:indexPath.row];
     }
     
     

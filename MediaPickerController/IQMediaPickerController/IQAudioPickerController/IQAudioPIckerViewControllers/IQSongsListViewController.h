@@ -23,10 +23,13 @@
 
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @class IQAudioPickerController;
 
 @interface IQSongsListViewController : UITableViewController
+
+@property(readonly) MPMediaQuery *songsQuery;
 
 @property(nonatomic, assign) IQAudioPickerController *audioPickerController;
 

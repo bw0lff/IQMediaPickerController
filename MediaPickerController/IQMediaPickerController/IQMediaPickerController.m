@@ -120,6 +120,14 @@
 }
 
 #pragma mark - IQMediaCaptureControllerDelegate
+- (void)mediaCaptureController:(IQMediaCaptureController*)controller didFinishMediaWithAssets:(NSArray *)assets
+{
+    if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithAssets:)])
+    {
+        [self.delegate mediaPickerController:self didFinishMediaWithAssets:assets];
+    }
+}
+
 - (void)mediaCaptureController:(IQMediaCaptureController*)controller didFinishMediaWithInfo:(NSDictionary *)info
 {
     if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithInfo:)])
@@ -137,6 +145,14 @@
 }
 
 #pragma mark - IQAssetsPickerControllerDelegate
+- (void)assetsPickerController:(IQAssetsPickerController*)controller didFinishMediaWithAssets:(NSArray *)assets
+{
+    if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithAssets:)])
+    {
+        [self.delegate mediaPickerController:self didFinishMediaWithAssets:assets];
+    }
+}
+
 - (void)assetsPickerController:(IQAssetsPickerController*)controller didFinishMediaWithInfo:(NSDictionary *)info
 {
     if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithInfo:)])
@@ -156,10 +172,14 @@
 #pragma mark - IQAudioPickerControllerDelegate
 - (void)audioPickerController:(IQAudioPickerController *)mediaPicker didPickMediaItems:(NSArray*)mediaItems
 {
+    if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithItems:)])
+    {
+        [self.delegate mediaPickerController:self didFinishMediaWithItems:mediaItems];
+    }
+    
     if ([self.delegate respondsToSelector:@selector(mediaPickerController:didFinishMediaWithInfo:)])
     {
         NSDictionary *info = [NSDictionary dictionaryWithObject:mediaItems forKey:IQMediaTypeAudio];
-        
         [self.delegate mediaPickerController:self didFinishMediaWithInfo:info];
     }
 }

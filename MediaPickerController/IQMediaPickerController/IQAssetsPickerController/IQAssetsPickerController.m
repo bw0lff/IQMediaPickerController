@@ -27,6 +27,7 @@
 
 @interface IQAssetsPickerController ()
 {
+    NSMutableArray *_assetGroups;
     UIBarButtonItem *cancelBarButton;
 }
 
@@ -35,9 +36,8 @@
 @end
 
 @implementation IQAssetsPickerController
-{
-    NSMutableArray *_assetGroups;
-}
+
+@synthesize assetGroups = _assetGroups;
 
 #pragma - mark View lifecycle
 
