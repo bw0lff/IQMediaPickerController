@@ -54,6 +54,7 @@
     [super viewDidLoad];
 
     _songsQuery = [MPMediaQuery songsQuery];
+    [_songsQuery addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@(NO) forProperty:MPMediaItemPropertyHasProtectedAsset]];
     [_songsQuery addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@(NO) forProperty:MPMediaItemPropertyIsCloudItem]];
     
     self.tableView.rowHeight = 50;
