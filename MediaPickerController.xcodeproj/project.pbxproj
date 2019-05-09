@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C8EA1BC1F1A8C7B00026A35 /* AudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EA1B71F1A8C7B00026A35 /* AudioTableViewCell.m */; };
+		4C8EA1BD1F1A8C7B00026A35 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EA1B91F1A8C7B00026A35 /* PhotoTableViewCell.m */; };
+		4C8EA1BE1F1A8C7B00026A35 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EA1BB1F1A8C7B00026A35 /* VideoTableViewCell.m */; };
+		4C99E3181F13F75300CE757D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C99E3171F13F75300CE757D /* Launch Screen.storyboard */; };
+		4CF11B6F2105E08300BA4896 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF11B6E2105E08300BA4896 /* MediaPlayer.framework */; };
+		4CF11B712105E08F00BA4896 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF11B702105E08F00BA4896 /* AVFoundation.framework */; };
+		4CF11B732105E09900BA4896 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF11B722105E09900BA4896 /* AVKit.framework */; };
+		4CF11B752105EB1600BA4896 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF11B742105EB1600BA4896 /* Photos.framework */; };
+		B2581E502BC3BCAA8A65AD07 /* Pods_MediaPickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E67E610E47B1FE4FA6B4C5 /* Pods_MediaPickerController.framework */; };
+		C035C21F19A8B5BE0072C2C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C035C21E19A8B5BE0072C2C0 /* Foundation.framework */; };
+		C035C22119A8B5BE0072C2C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C035C22019A8B5BE0072C2C0 /* CoreGraphics.framework */; };
+		C035C22319A8B5BE0072C2C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C035C22219A8B5BE0072C2C0 /* UIKit.framework */; };
+		C035C22919A8B5BE0072C2C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C035C22719A8B5BE0072C2C0 /* InfoPlist.strings */; };
+		C035C22B19A8B5BE0072C2C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C035C22A19A8B5BE0072C2C0 /* main.m */; };
+		C035C22F19A8B5BE0072C2C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C035C22E19A8B5BE0072C2C0 /* AppDelegate.m */; };
+		C035C23219A8B5BE0072C2C0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C035C23019A8B5BE0072C2C0 /* Main_iPhone.storyboard */; };
+		C035C23819A8B5BE0072C2C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C035C23719A8B5BE0072C2C0 /* ViewController.m */; };
+		C035C23A19A8B5BE0072C2C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C035C23919A8B5BE0072C2C0 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C691B281F56F20500DC80FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		20E67E610E47B1FE4FA6B4C5 /* Pods_MediaPickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaPickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8EA1B61F1A8C7B00026A35 /* AudioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTableViewCell.h; sourceTree = "<group>"; };
+		4C8EA1B71F1A8C7B00026A35 /* AudioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioTableViewCell.m; sourceTree = "<group>"; };
+		4C8EA1B81F1A8C7B00026A35 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		4C8EA1B91F1A8C7B00026A35 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
+		4C8EA1BA1F1A8C7B00026A35 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
+		4C8EA1BB1F1A8C7B00026A35 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
+		4C99E3171F13F75300CE757D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4CF11B6E2105E08300BA4896 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4CF11B702105E08F00BA4896 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4CF11B722105E09900BA4896 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4CF11B742105EB1600BA4896 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		58ECD05A51500ACC7B77A440 /* Pods-MediaPickerController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPickerController.release.xcconfig"; path = "Pods/Target Support Files/Pods-MediaPickerController/Pods-MediaPickerController.release.xcconfig"; sourceTree = "<group>"; };
+		B425FEFB6305D1DCA05474C9 /* Pods-MediaPickerController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPickerController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MediaPickerController/Pods-MediaPickerController.debug.xcconfig"; sourceTree = "<group>"; };
+		C035C21B19A8B5BE0072C2C0 /* MediaPickerController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPickerController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C035C21E19A8B5BE0072C2C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C035C22019A8B5BE0072C2C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C035C22219A8B5BE0072C2C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C035C22619A8B5BE0072C2C0 /* MediaPickerController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MediaPickerController-Info.plist"; sourceTree = "<group>"; };
+		C035C22819A8B5BE0072C2C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C035C22A19A8B5BE0072C2C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C035C22C19A8B5BE0072C2C0 /* MediaPickerController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediaPickerController-Prefix.pch"; sourceTree = "<group>"; };
+		C035C22D19A8B5BE0072C2C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C035C22E19A8B5BE0072C2C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C035C23119A8B5BE0072C2C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C035C23619A8B5BE0072C2C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C035C23719A8B5BE0072C2C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C035C23919A8B5BE0072C2C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C035C24019A8B5BE0072C2C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C035C21819A8B5BE0072C2C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF11B752105EB1600BA4896 /* Photos.framework in Frameworks */,
+				4CF11B732105E09900BA4896 /* AVKit.framework in Frameworks */,
+				4CF11B712105E08F00BA4896 /* AVFoundation.framework in Frameworks */,
+				4CF11B6F2105E08300BA4896 /* MediaPlayer.framework in Frameworks */,
+				C035C22119A8B5BE0072C2C0 /* CoreGraphics.framework in Frameworks */,
+				C035C22319A8B5BE0072C2C0 /* UIKit.framework in Frameworks */,
+				C035C21F19A8B5BE0072C2C0 /* Foundation.framework in Frameworks */,
+				B2581E502BC3BCAA8A65AD07 /* Pods_MediaPickerController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39C34B0E5F5E710BB657434B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B425FEFB6305D1DCA05474C9 /* Pods-MediaPickerController.debug.xcconfig */,
+				58ECD05A51500ACC7B77A440 /* Pods-MediaPickerController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C035C21219A8B5BE0072C2C0 = {
+			isa = PBXGroup;
+			children = (
+				C035C22419A8B5BE0072C2C0 /* MediaPickerController */,
+				C035C21D19A8B5BE0072C2C0 /* Frameworks */,
+				C035C21C19A8B5BE0072C2C0 /* Products */,
+				39C34B0E5F5E710BB657434B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C035C21C19A8B5BE0072C2C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C035C21B19A8B5BE0072C2C0 /* MediaPickerController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C035C21D19A8B5BE0072C2C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF11B742105EB1600BA4896 /* Photos.framework */,
+				4CF11B722105E09900BA4896 /* AVKit.framework */,
+				4CF11B702105E08F00BA4896 /* AVFoundation.framework */,
+				4CF11B6E2105E08300BA4896 /* MediaPlayer.framework */,
+				C035C21E19A8B5BE0072C2C0 /* Foundation.framework */,
+				C035C22019A8B5BE0072C2C0 /* CoreGraphics.framework */,
+				C035C22219A8B5BE0072C2C0 /* UIKit.framework */,
+				C035C24019A8B5BE0072C2C0 /* XCTest.framework */,
+				20E67E610E47B1FE4FA6B4C5 /* Pods_MediaPickerController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C035C22419A8B5BE0072C2C0 /* MediaPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				C035C22D19A8B5BE0072C2C0 /* AppDelegate.h */,
+				C035C22E19A8B5BE0072C2C0 /* AppDelegate.m */,
+				C035C23019A8B5BE0072C2C0 /* Main_iPhone.storyboard */,
+				4C99E3171F13F75300CE757D /* Launch Screen.storyboard */,
+				C035C23619A8B5BE0072C2C0 /* ViewController.h */,
+				C035C23719A8B5BE0072C2C0 /* ViewController.m */,
+				4C8EA1B61F1A8C7B00026A35 /* AudioTableViewCell.h */,
+				4C8EA1B71F1A8C7B00026A35 /* AudioTableViewCell.m */,
+				4C8EA1B81F1A8C7B00026A35 /* PhotoTableViewCell.h */,
+				4C8EA1B91F1A8C7B00026A35 /* PhotoTableViewCell.m */,
+				4C8EA1BA1F1A8C7B00026A35 /* VideoTableViewCell.h */,
+				4C8EA1BB1F1A8C7B00026A35 /* VideoTableViewCell.m */,
+				C035C23919A8B5BE0072C2C0 /* Images.xcassets */,
+				C035C22519A8B5BE0072C2C0 /* Supporting Files */,
+			);
+			path = MediaPickerController;
+			sourceTree = "<group>";
+		};
+		C035C22519A8B5BE0072C2C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C035C22619A8B5BE0072C2C0 /* MediaPickerController-Info.plist */,
+				C035C22719A8B5BE0072C2C0 /* InfoPlist.strings */,
+				C035C22A19A8B5BE0072C2C0 /* main.m */,
+				C035C22C19A8B5BE0072C2C0 /* MediaPickerController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C035C21A19A8B5BE0072C2C0 /* MediaPickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C035C25019A8B5BE0072C2C0 /* Build configuration list for PBXNativeTarget "MediaPickerController" */;
+			buildPhases = (
+				05CD3A79E9EC3CE4A8C118C0 /* [CP] Check Pods Manifest.lock */,
+				C035C21719A8B5BE0072C2C0 /* Sources */,
+				C035C21819A8B5BE0072C2C0 /* Frameworks */,
+				C035C21919A8B5BE0072C2C0 /* Resources */,
+				01E39DE55CC2DB09ACC3338F /* [CP] Embed Pods Frameworks */,
+				4C691B281F56F20500DC80FD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaPickerController;
+			productName = MediaPickerController;
+			productReference = C035C21B19A8B5BE0072C2C0 /* MediaPickerController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C035C21319A8B5BE0072C2C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Iftekhar;
+				TargetAttributes = {
+					C035C21A19A8B5BE0072C2C0 = {
+						DevelopmentTeam = 7UUTF6T5P9;
+					};
+				};
+			};
+			buildConfigurationList = C035C21619A8B5BE0072C2C0 /* Build configuration list for PBXProject "MediaPickerController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C035C21219A8B5BE0072C2C0;
+			productRefGroup = C035C21C19A8B5BE0072C2C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C035C21A19A8B5BE0072C2C0 /* MediaPickerController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C035C21919A8B5BE0072C2C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C99E3181F13F75300CE757D /* Launch Screen.storyboard in Resources */,
+				C035C23A19A8B5BE0072C2C0 /* Images.xcassets in Resources */,
+				C035C23219A8B5BE0072C2C0 /* Main_iPhone.storyboard in Resources */,
+				C035C22919A8B5BE0072C2C0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01E39DE55CC2DB09ACC3338F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MediaPickerController/Pods-MediaPickerController-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DBCameraButton/DBCameraButton.framework",
+				"${BUILT_PRODUCTS_DIR}/IQMediaPickerController/IQMediaPickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/SCSiriWaveformView/SCSiriWaveformView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DBCameraButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQMediaPickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSiriWaveformView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediaPickerController/Pods-MediaPickerController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		05CD3A79E9EC3CE4A8C118C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediaPickerController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C035C21719A8B5BE0072C2C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C8EA1BE1F1A8C7B00026A35 /* VideoTableViewCell.m in Sources */,
+				C035C23819A8B5BE0072C2C0 /* ViewController.m in Sources */,
+				4C8EA1BD1F1A8C7B00026A35 /* PhotoTableViewCell.m in Sources */,
+				4C8EA1BC1F1A8C7B00026A35 /* AudioTableViewCell.m in Sources */,
+				C035C22F19A8B5BE0072C2C0 /* AppDelegate.m in Sources */,
+				C035C22B19A8B5BE0072C2C0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C035C22719A8B5BE0072C2C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C035C22819A8B5BE0072C2C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C035C23019A8B5BE0072C2C0 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C035C23119A8B5BE0072C2C0 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C035C24E19A8B5BE0072C2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C035C24F19A8B5BE0072C2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C035C25119A8B5BE0072C2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B425FEFB6305D1DCA05474C9 /* Pods-MediaPickerController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_AUTOLINK = NO;
+				DEVELOPMENT_TEAM = 7UUTF6T5P9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MediaPickerController/MediaPickerController-Prefix.pch";
+				INFOPLIST_FILE = "MediaPickerController/MediaPickerController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Iftekhar.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C035C25219A8B5BE0072C2C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58ECD05A51500ACC7B77A440 /* Pods-MediaPickerController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_AUTOLINK = NO;
+				DEVELOPMENT_TEAM = 7UUTF6T5P9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MediaPickerController/MediaPickerController-Prefix.pch";
+				INFOPLIST_FILE = "MediaPickerController/MediaPickerController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Iftekhar.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C035C21619A8B5BE0072C2C0 /* Build configuration list for PBXProject "MediaPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C035C24E19A8B5BE0072C2C0 /* Debug */,
+				C035C24F19A8B5BE0072C2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C035C25019A8B5BE0072C2C0 /* Build configuration list for PBXNativeTarget "MediaPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C035C25119A8B5BE0072C2C0 /* Debug */,
+				C035C25219A8B5BE0072C2C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C035C21319A8B5BE0072C2C0 /* Project object */;
+}
