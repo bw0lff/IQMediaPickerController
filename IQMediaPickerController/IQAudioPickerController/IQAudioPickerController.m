@@ -57,26 +57,27 @@
 
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     
-    IQSongsPlaylistViewController *playlistController = [[IQSongsPlaylistViewController alloc] init];
-    IQSongsArtistListViewController *artistController = [[IQSongsArtistListViewController alloc] init];
+//    IQSongsPlaylistViewController *playlistController = [[IQSongsPlaylistViewController alloc] init];
+//    IQSongsArtistListViewController *artistController = [[IQSongsArtistListViewController alloc] init];
     IQSongsListViewController *songsController = [[IQSongsListViewController alloc] init];
-    IQSongsAlbumListViewController *albumsController = [[IQSongsAlbumListViewController alloc] init];
+//    IQSongsAlbumListViewController *albumsController = [[IQSongsAlbumListViewController alloc] init];
 //    IQSongsGenreViewController *genreController = [[IQSongsGenreViewController alloc] init];
 //    IQSongsCompilationsViewController *compilationsController = [[IQSongsCompilationsViewController alloc] init];
 //    IQSongsComposersViewController *composersController = [[IQSongsComposersViewController alloc] init];
 
-    playlistController.audioPickerController = self;
-    artistController.audioPickerController = self;
+//    playlistController.audioPickerController = self;
+//    artistController.audioPickerController = self;
     songsController.audioPickerController = self;
-    albumsController.audioPickerController = self;
+//    albumsController.audioPickerController = self;
 //    composersController.audioPickerController = self;
 //    compilationsController.audioPickerController = self;
 //    genreController.audioPickerController = self;
 
-    self.viewControllers = @[[[UINavigationController alloc] initWithRootViewController:playlistController],
-                             [[UINavigationController alloc] initWithRootViewController:artistController],
+    self.viewControllers = @[
+//                             [[UINavigationController alloc] initWithRootViewController:playlistController],
+//                             [[UINavigationController alloc] initWithRootViewController:artistController],
                              [[UINavigationController alloc] initWithRootViewController:songsController],
-                             [[UINavigationController alloc] initWithRootViewController:albumsController],
+//                             [[UINavigationController alloc] initWithRootViewController:albumsController],
 //                             [[UINavigationController alloc] initWithRootViewController:genreController],
 //                             [[UINavigationController alloc] initWithRootViewController:compilationsController],
 //                             [[UINavigationController alloc] initWithRootViewController:composersController],
@@ -94,8 +95,9 @@
 
     self.tabBar.tintColor = IQTheme.getInstance.navBarTitleColor;
     self.tabBar.barTintColor = IQTheme.getInstance.navBarBackgroundColor;
+    self.tabBar.hidden = (self.viewControllers.count < 2);
     
-    [self setSelectedIndex:2];
+//    [self setSelectedIndex:2];
     self.customizableViewControllers = nil;
 }
 

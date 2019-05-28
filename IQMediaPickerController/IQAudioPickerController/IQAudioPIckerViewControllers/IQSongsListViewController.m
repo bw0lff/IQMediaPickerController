@@ -74,7 +74,7 @@
     _songsQuery = [MPMediaQuery songsQuery];
     [_songsQuery addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@(NO) forProperty:MPMediaItemPropertyHasProtectedAsset]];
     [_songsQuery addFilterPredicate:[MPMediaPropertyPredicate predicateWithValue:@(NO) forProperty:MPMediaItemPropertyIsCloudItem]];
-    
+
     self.tableView.rowHeight = 50;
     self.tableView.separatorColor = IQTheme.getInstance.cellSeparatorColor;
     self.tableView.backgroundColor = IQTheme.getInstance.viewBackgroundColor;
@@ -212,7 +212,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MPMediaItem *item = [[_songsQuery items] objectAtIndex:indexPath.row];
+    MPMediaItem *item = nil;
 
     if (self.collections)
     {
